@@ -150,6 +150,8 @@ window.addEventListener('DOMContentLoaded', () => {
   let finishDate = new Date(new Date().getTime() + quizTime * 60000).getTime()  // in miliseconds
 
   //countdown function
+   //  some code from google ,w3 schools
+   
   function countDown() {
     let now = new Date().getTime()
     let counter = finishDate - now
