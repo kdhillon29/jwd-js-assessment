@@ -146,7 +146,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   ///   countdown timer
 
-  let quizTime = 2   //in mins
+  let quizTime = 2   //quiz time in mins
   let finishDate = new Date(new Date().getTime() + quizTime * 60000).getTime()  // in miliseconds
 
   function countDown() {
