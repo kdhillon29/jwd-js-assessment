@@ -91,6 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
       console.log(`score is ${score}`)
+      submitBtn.disabled = true
       document.querySelector('#score').innerHTML = `Score :<strong>${score}/${total}</strong> correct`
       document.querySelector('#time').innerHTML=`<div> <p>Quiz Over.</p>
       <h2>Your score :${score}/${total}</h2>
