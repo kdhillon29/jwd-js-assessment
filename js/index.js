@@ -92,7 +92,9 @@ window.addEventListener('DOMContentLoaded', () => {
       }
       console.log(`score is ${score}`)
       document.querySelector('#score').innerHTML = `Score :<strong>${score}/${total}</strong> correct`
-      document.querySelector('#time').innerHTML=`Quiz Over.Your score :${score}`
+      document.querySelector('#time').innerHTML=`<div> <p>Quiz Over.</p>
+      <h2>Your score :${score}/${total}</h2>
+       </div>`
 
     });
   };
@@ -151,7 +153,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //countdown function
    //  some code from google ,w3 schools
-   
+
   function countDown() {
     let now = new Date().getTime()
     let counter = finishDate - now
@@ -176,7 +178,8 @@ window.addEventListener('DOMContentLoaded', () => {
   //reset quiz timer on submit
   function resetCountDown(){
     clearInterval(timer)
-    document.querySelector('#time').innerHTML="Quiz Over"
+    calculateScore()
+    
 
   }
   submitBtn.addEventListener('click', resetCountDown)

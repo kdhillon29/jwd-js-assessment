@@ -1,4 +1,9 @@
 
 #time{
      color:blue;
+
+}
+#time div{
+     text-align: center;
+     color:green;
 }
