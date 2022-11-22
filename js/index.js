@@ -140,17 +140,18 @@ window.addEventListener('DOMContentLoaded', () => {
   //reload window
   function resetQuiz() {
     window.location.reload()
+    localStorage.clear()
   }
   document.querySelector('#btnReset').addEventListener('click', resetQuiz)
 
   ///   countdown timer
 
   let quizTime = 2   //in mins
-  let newDate = new Date(new Date().getTime() + quizTime * 60000).getTime()  // in miliseconds
+  let finishDate = new Date(new Date().getTime() + quizTime * 60000).getTime()  // in miliseconds
 
   function countDown() {
     let now = new Date().getTime()
-    let counter = newDate - now
+    let counter = finishDate - now
     let minutes = Math.floor((counter % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((counter % (1000 * 60)) / 1000);
     //  let time =`${date.getMinutes()}: ${date.getSeconds()}`
